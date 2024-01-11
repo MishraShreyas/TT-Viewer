@@ -1,5 +1,7 @@
 <?php
 
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "test_db");
+
+$db = "test_db";
+$conn = mysqli_connect("localhost", "root", "", "$db");
 

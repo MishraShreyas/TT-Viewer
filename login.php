@@ -1,3 +1,21 @@
+<?php
+require_once("functions.php");
+if (IsLoggedIn()) header("location: index.php");
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    if (LogIn($conn, addslashes($_POST["email"]), addslashes($_POST["password"])))
+    {
+        header("location: index.php");
+        die;
+    } else {
+        $error = "Incorrect email or password";
+    }
+
+    //print_r(LogIn($conn, addslashes($_POST["email"]), addslashes($_POST["password"])));
+    
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +33,11 @@
                 <button>Login</button>
             </form> 
         </div>
+        <?php if (!empty($error)) {
+            echo "<div style='color:red'>$error</div>";
+        }            
+        ?>
+         
 
         <?php require_once("footer.php");?>
     </body>

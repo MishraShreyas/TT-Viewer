@@ -1,0 +1,54 @@
+<div>
+            <div class="accent-orange-gradient"></div>
+            </div>
+            <div><?php echo GetTimeTable(); ?></div>
+            <div></div>
+            <div></div>
+                <div>
+            <div class="accent-green-gradient"></div>
+            </div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+            <div class="accent-cyan-gradient"></div>
+            </div>
+            <div></div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>
+            <div>
+            <div class="accent-pink-gradient"></div>
+            </div>
+            <div></div>
+            <div>
+            <div class="accent-purple-gradient"></div>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>
+            <div>
+            <div class="accent-purple-gradient"></div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="weekend"></div>
+            <div class="weekend"></div>

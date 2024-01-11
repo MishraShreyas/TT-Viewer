@@ -2,9 +2,64 @@
 <html>
 <head>
     <title> TimeTable </title>
+    <link rel="stylesheet" type="text/css" href="css/timetable.css">
 </head>
 <body>
     <?php require_once("header.php");?>
-    <?php require_once("footer.php");?>
+    <div class="timetable">
+        <div class="week-names">
+            <div>monday</div>
+            <div>tuesday</div>
+            <div>wednesday</div>
+            <div>thursday</div>
+            <div>friday</div>
+            <div class="weekend">saturday</div>
+            <div class="weekend">sunday</div>
+        </div>
+        <div class="time-interval">
+            <div>8:30 - 9:25</div>
+            <div>9:30 - 10:25</div>
+            <div>10:40 - 11:35</div>
+            <div>11:40 - 12:35</div>
+            <div>12:40 - 13:30</div>
+            <div>13:30 - 14:25</div>
+            <div>14:30 - 15:25</div>
+            <div>15:40 - 16:35</div>
+            <div>16:40 - 17:35</div>
+        </div>
+        <div class="content">
+            <?php
+            $lunch_row = "12:40";
+            $days = array("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday");
+            $slots = array("8:30","9:30", "10:40", "11:40", "12:40", "13:30", "14:30", "15:40", "16:40");
+
+            foreach($slots as $slot) {
+                if ($slot == $lunch_row) {
+                    foreach ($days as $day)
+                        echo "<div class='lunch-break'></div>";
+                } else {
+                    foreach ($days as $day) {
+                        $arr = GetTimeTable($conn, $day, $slot);
+                        if (is_null($arr)) {
+                            $cell = "<div><a style='color:white;' href='tt_add_slot.php?day=$day&slot=$slot'>x</a></div>";
+                        } else {
+                            $clr = $arr["color"];
+                            $title = $arr["title"];
+                            $code = $arr["code"];
+                            $venue = $arr["venue"];
+                            $br = "<br>";
+                            $href = "<a href='tt_remove_slot.php?day=$day&slot=$slot'>";
+                            $cell = $href . $clr . $title . $br . $code . $br . $venue . "</div></a>";
+                        }
+                        if ($day == "saturday" or $day == "sunday")
+                            echo "<div class = 'weekend'>$cell</div>";
+                        else echo "<div>$cell</div>";
+                    }
+                }
+            }
+            ?>
+        </div>
+    </div>
+    <?php //require_once("footer.php");?>
 </body>
 </html>
