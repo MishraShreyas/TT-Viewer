@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET")
             <form method="post" style="margin: auto; padding: 10px">
                 <input type="text" name="code" placeholder="Course Code" required><br>
                 <input type="text" name="title" placeholder="Course Title" required><br>
-                <select name="color" required>
+                <select name="color">
                     <option value="">Select Color</option>
                     <option value="pink">Pink</option>
                     <option value="orange">Orange</option>

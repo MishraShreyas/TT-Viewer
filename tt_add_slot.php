@@ -28,7 +28,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
                 echo "<input type='hidden' name = 'slot' value = $slot>";
                 ?>
                 <label>Subject:  </label>
-                <select name = "subject" id = "subject">
+                <select name = "subject" id = "subject" required>
                     <?php
                     $subjects = GetSubjects($conn);
                     foreach($subjects as $subject) {
