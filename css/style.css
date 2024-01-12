@@ -28,9 +28,28 @@ header {
 }
 
 input {
-    margin: 4px;
-    padding: 8px;
+    margin: 10px 0;
+    padding: 10px;
     width: 100%;
+    border: 0;
+    background-color: #29373a;
+    box-shadow:0 0 15px 4px #152224;
+    color: white;
+    border-left: 1px solid #eee;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 0;
+    background-color: #29373a;
+    box-shadow:0 0 15px 4px #152224;
+    color: white;
+    border-left: 1px solid #eee;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 body {
@@ -38,11 +57,47 @@ body {
 }
 
 button {
-    padding: 10px;
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* usual styles */
+    margin: 10px 0;
+    padding:10px;
+    border:none;
+    background-color:#2e4b51;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+}
+
+button:hover {
+    box-shadow: 0 20px 30px 0 #2e4b51;
+    transform: scale(1.05);
 }
 
 footer {
     padding: 20px;
     text-align: center;
     background-color: #5e6567;
+}
+
+div.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.center-text {
+    text-align: center;
+}
+
+.text {
+    padding: 10px;
+    background-color: #30383a;
+    text-align: center;
+}
+
+.container {
+    padding: 25px;
 }

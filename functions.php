@@ -92,7 +92,7 @@ function AddSubject($conn, $code, $title, $color) {
     $query = "insert into subjects (code, title, color) values ('$code', '$title', '$color')";
     $result = mysqli_query($conn, $query);
 
-    header("Refresh: 0");
+    header("location: subjects.php");
     die;
 }
 
@@ -128,5 +128,13 @@ function EditSlot($conn, $day, $slot, $code, $venue) {
     $result = mysqli_query($conn, $query);
 
     header("location: index.php");
+    die;
+}
+
+function EditSubject($conn, $code, $title, $color) {
+    $query = "update subjects set title = '$title', color = '$color' where code = '$code'";
+    $result = mysqli_query($conn, $query);
+
+    header("location: subjects.php");
     die;
 }

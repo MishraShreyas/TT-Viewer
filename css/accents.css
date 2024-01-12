@@ -1,0 +1,85 @@
+
+.accent-pink-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ee8ebc, #eea08e);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-pink-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(238, 142, 188, 0.3);
+    transform: scale(1.05);
+  }
+  .accent-orange-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #eec08e, #dcee8e);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-orange-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(238, 192, 142, 0.3);
+    transform: scale(1.05);
+  }
+  .accent-green-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #bcee8e, #8eeea0);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-green-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(188, 238, 142, 0.3);
+    transform: scale(1.05);
+  }
+  .accent-cyan-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8eeec0, #8edcee);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-cyan-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(142, 238, 192, 0.3);
+    transform: scale(1.05);
+  }
+  .accent-blue-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8ebcee, #a08eee);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-blue-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(142, 188, 238, 0.3);
+    transform: scale(1.05);
+  }
+  .accent-purple-gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #c08eee, #ee8edc);
+    color: #394b62;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent-purple-gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(192, 142, 238, 0.3);
+    transform: scale(1.05);
+  }
+  .accent--gradient {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5e6567, #30383a);
+    color: white;
+    transition: 0.2s ease box-shadow, 0.2s ease transform;
+  }
+  .accent--gradient:hover {
+    box-shadow: 0 20px 30px 0 rgba(7, 27, 64, 0.532);
+    transform: scale(1.05);
+  }
