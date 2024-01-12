@@ -50,16 +50,8 @@ function GetTimeTable($conn, $day, $slot) {
             "title" => $sub_row["title"],
             "code" => $row["subjectcode"],
             "venue" => $row["venue"],
-            "color" => ""
+            "color" => "<div class='accent-". $sub_row['color'] . "-gradient'>",
         );
-        $clr = "<div";
-        if (!is_null($sub_row["color"])) {
-            $color = $sub_row["color"];
-            $style = " class='accent-$color-gradient'";
-            $clr = $clr . $style;
-        }
-        $clr = $clr . '>';
-        $arr['color'] = $clr;
         return $arr;
     } else return null;
 }

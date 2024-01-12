@@ -41,14 +41,14 @@
                     foreach ($days as $day) {
                         $arr = GetTimeTable($conn, $day, $slot);
                         if (is_null($arr)) {
-                            $cell = "<div><a style='color:white;' href='tt_add_slot.php?day=$day&slot=$slot'>x</a></div>";
+                            $cell = "<div><a style='color:white;' href='slot_add_edit.php?day=$day&slot=$slot&action=add'>x</a></div>";
                         } else {
                             $clr = $arr["color"];
                             $title = $arr["title"];
                             $code = $arr["code"];
                             $venue = $arr["venue"];
                             $br = "<br>";
-                            $href = "<a style='width: 100%; height: 100%;' href='tt_edit_slot.php?day=$day&slot=$slot'>";
+                            $href = "<a style='width: 100%; height: 100%;' href='slot_add_edit.php?day=$day&slot=$slot&action=edit'>";
                             $padding = "<div style='padding: 10px;'>";
                             $end = "</div></div></a>";
                             $cell = $href . $clr . $padding . $title . $br . $code . $br . $venue . $end;

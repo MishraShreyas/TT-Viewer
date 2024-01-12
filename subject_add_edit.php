@@ -53,18 +53,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 echo "<option value='$color' $selected>$txt</option>";
             }
             echo "</select><br>";
-            echo "<button style='width: 75px'>$action</button>";
+            echo "<button>$action</button>";
             $action = strtolower($action);
             echo "<input type='hidden' name='action' value='$action'>";
             ?>
         </div>
         </form> 
-        <form method="post">
-                <?php
+        <?php
+            if ($action == "edit") {
+                echo "<form method='post'>";
                 echo "<input type='hidden' name = 'code' value = '$code'>";
                 echo "<input type='hidden' name = 'action' value = 'delete'>";
-                ?>
-                <button style='background-color: maroon'>Delete</button></form>
+                echo "<button class = 'delete'>Delete</button></form>";
+                echo "<br>";
+            }
+        ?>
     </div>
     <?php require_once("footer.php");?>
 </body>

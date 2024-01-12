@@ -62,6 +62,7 @@ button {
     -webkit-appearance:none;
   
     /* usual styles */
+    width: 75px;
     margin: 10px 0;
     padding:10px;
     border:none;
@@ -72,7 +73,28 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 20px 30px 0 #2e4b51;
+    box-shadow: 0 10px 15px 0 #2e4b51;
+    transform: scale(1.05);
+}
+
+button.delete {
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* usual styles */
+    width: 75px;
+    margin: 10px 0;
+    padding:10px;
+    border:none;
+    background-color:maroon;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+}
+
+button.delete:hover {
+    box-shadow: 0 10px 15px 0 rgb(161, 6, 6);
     transform: scale(1.05);
 }
 
@@ -86,6 +108,8 @@ div.centered {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 div.center-text {
