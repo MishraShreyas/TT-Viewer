@@ -1,5 +1,6 @@
 <?php
 require_once("functions.php");
+if (!IsLoggedIn()) header("location: login.php");
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     if (isset($_POST["title"]))
@@ -41,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET")
 
         <br><br>
 
-        <div style="margin: auto; max-width: 600px;">
-            <h2 style="text-align: center; color: white">Add New</h2>
+        <div style="margin: auto; max-width: 600px; text-align: center;">
+            <h2 style="color: white">Add New</h2>
             <form method="post" style="margin: auto; padding: 10px">
                 <input type="text" name="code" placeholder="Course Code" required><br>
                 <input type="text" name="title" placeholder="Course Title" required><br>
-                <select name="color">
+                <select name="color" required>
                     <option value="">Select Color</option>
                     <option value="pink">Pink</option>
                     <option value="orange">Orange</option>

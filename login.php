@@ -24,8 +24,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
     <body>
         <?php require_once("header.php");?>
-        <div style="margin: auto; max-width: 600px;">
-            <h2 style="text-align: center; color: white">LOGIN</h2>
+        <div style="margin: auto; max-width: 600px; text-align: center;">
+            <h2 style="color: white">LOGIN</h2>
             <form method="post" style="margin: auto; padding: 10px">
                 <input type="text" name="email" placeholder="Email"><br>
                 <input type="password" name="password" placeholder="Password"><br>

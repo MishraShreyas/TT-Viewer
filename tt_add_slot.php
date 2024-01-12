@@ -1,5 +1,6 @@
 <?php
 require_once("functions.php");
+if (!IsLoggedIn()) header("location: login.php");
 if (($_SERVER["REQUEST_METHOD"] == "POST")) {
     AddSlot($conn, addslashes($_POST["day"]), addslashes($_POST["slot"]), addslashes($_POST["subject"]), addslashes(strtoupper($_POST["venue"])));
     print_r($_GET);
@@ -9,7 +10,6 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
 <html>
 <head>
     <title> TimeTable </title>
-    <link rel="stylesheet" type="text/css" href="css/timetable.css">
 </head>
 <body>
     <?php require_once("header.php");?>

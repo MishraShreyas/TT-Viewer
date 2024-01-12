@@ -71,6 +71,23 @@ function GetSubjects($conn) {
     return $result;
 }
 
+function GetSubjectByCode($conn, $code) {
+    $query = "select * from subjects where code = '$code' limit 1";
+    $result = mysqli_query($conn, $query);
+
+    return $result;
+}
+
+function GetSchedule($conn, $day) {
+    if (!isset($_SESSION['info'])) return null;
+
+    $id = $_SESSION['info']['id'];
+    $query = "select * from timetable where id=$id and day='$day'";
+    $result = mysqli_query($conn, $query);
+
+    return $result;
+}
+
 function AddSubject($conn, $code, $title, $color) {
     $query = "insert into subjects (code, title, color) values ('$code', '$title', '$color')";
     $result = mysqli_query($conn, $query);
