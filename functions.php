@@ -104,3 +104,12 @@ function RemoveSlot($conn, $day, $slot) {
     header("location: index.php");
     die;
 }
+
+function EditSlot($conn, $day, $slot, $code, $venue) {
+    $id = $_SESSION['info']['id'];
+    $query = "update timetable set subjectcode = '$code', venue = '$venue' where id=$id and day='$day' and slot = '$slot'";
+    $result = mysqli_query($conn, $query);
+
+    header("location: index.php");
+    die;
+}

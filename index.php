@@ -48,8 +48,10 @@
                             $code = $arr["code"];
                             $venue = $arr["venue"];
                             $br = "<br>";
-                            $href = "<a href='tt_remove_slot.php?day=$day&slot=$slot'>";
-                            $cell = $href . $clr . $title . $br . $code . $br . $venue . "</div></a>";
+                            $href = "<a style='width: 100%; height: 100%;' href='tt_edit_slot.php?day=$day&slot=$slot'>";
+                            $padding = "<div style='padding: 10px;'>";
+                            $end = "</div></div></a>";
+                            $cell = $href . $clr . $padding . $title . $br . $code . $br . $venue . $end;
                         }
                         if ($day == "saturday" or $day == "sunday")
                             echo "<div class = 'weekend'>$cell</div>";
