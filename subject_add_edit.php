@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Subject</title>
+    <title>Subject - TTView</title>
 </head>
 <body>
     <?php require_once("header.php");?> <br>

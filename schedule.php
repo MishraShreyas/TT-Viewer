@@ -16,9 +16,13 @@ if (!IsLoggedIn()) header("location: login.php");
             <h1 style="color: cyan">Today's Schedule</h1><br>
             <?php
             $day = strtolower(date("l"));
-            $day = "friday";
             $currtime = date("H:i");
             $schedule = mysqli_fetch_all(GetSchedule($conn, $day), MYSQLI_ASSOC);
+
+            if (empty($schedule)) {
+                echo "<div><span class = 'accent--gradient' style = 'display: table'><h3>No classes today</h3></span></div><br><br>";
+            }
+
             usort($schedule, function($a, $b) {
                 return strtotime($a["slot"]) - strtotime($b["slot"]);
             });
@@ -40,6 +44,9 @@ if (!IsLoggedIn()) header("location: login.php");
         <div class = "centered">
             <div><br><h1 style='color:cyan'>Upcoming classes</h1></div><br>
             <?php
+            if (empty($schedule)) {
+                echo "<div><span class = 'accent--gradient' style = 'display: table'><h3>No classes left</h3></span></div><br><br>";
+            }
             foreach($schedule as $slot) {
                 if (strtotime($currtime) > strtotime($slot["slot"])) continue;
 

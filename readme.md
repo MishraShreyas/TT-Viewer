@@ -5,9 +5,8 @@ TT-Viewer or Timetable Viewer is a webapp used to manage timetables for classes.
 - Beautify tabs:
     - ~~Subjects~~
     - Schedule
-    - Add slot
-    - Edit slot
-    - Login / Sign up
+    - ~~Add / Edit slot~~
+    - ~~Login / Sign up~~
     - Home
 - temporary exclusion of events (disable event for a particular day)
 - add calendar format

@@ -26,7 +26,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST")) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title> TimeTable </title>
+    <title> Slot - TTView </title>
 </head>
 <body>
     <?php require_once("header.php");?>

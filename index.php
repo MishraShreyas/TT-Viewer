@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> TimeTable </title>
+    <title> TimeTable - TTView </title>
     <link rel="stylesheet" type="text/css" href="css/timetable.css">
 </head>
 <body>

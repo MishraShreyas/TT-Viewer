@@ -15,12 +15,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
     <body>
         <?php require_once("header.php");?>
+        <br>
         <div style="margin: auto; max-width: 600px; text-align: center;">
-            <h2 style="color: white">SIGN UP</h2>
+            <h2 style="color: cyan">SIGN UP</h2>
             <form method="post" style="margin: auto; padding: 10px">
-                <input type="text" name="email" placeholder="Email" required><br>
-                <input type="text" name="username" placeholder="Username" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
+                <input style="width: 200px" type="text" name="email" placeholder="Email" required><br>
+                <input style="width: 200px" type="text" name="username" placeholder="Username" required><br>
+                <input style="width: 200px" type="password" name="password" placeholder="Password" required><br>
 
                 <button>Sign Up</button>
             </form> 
