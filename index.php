@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php require_once("header.php");?>
-    <div class="timetable">
+    <div class="timetable" id = "section-to-print">
         <div class="week-names">
             <div>monday</div>
             <div>tuesday</div>

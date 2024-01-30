@@ -89,6 +89,9 @@ function AddSubject($conn, $code, $title, $color) {
 }
 
 function RemoveSubject($conn, $code) {
+    $query = "delete from timetable where subjectcode='$code'";
+    $result = mysqli_query($conn, $query);
+
     $query = "delete from subjects where code='$code'";
     $result = mysqli_query($conn, $query);
     

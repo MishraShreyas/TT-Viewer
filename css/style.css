@@ -52,10 +52,6 @@ select {
     border-bottom-right-radius: 5px;
 }
 
-body {
-    color: white;
-}
-
 button {
     /* remove default behavior */
     appearance:none;
@@ -125,3 +121,16 @@ div.center-text {
 .container {
     padding: 25px;
 }
+
+/*Allows printing only #section-to-print*/
+@media print {
+    body {
+      visibility: hidden;
+    }
+    #section-to-print {
+      visibility: visible;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
